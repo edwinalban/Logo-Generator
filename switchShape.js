@@ -1,6 +1,7 @@
+// Imports classes from shapes.js file
 const { Triangle, Square, Circle } = require("./lib/shapes");
 
-
+// Gets shape value from user inputs and calls corresponding constructor
 function switchShape(answers) {
     const shape = answers.shape;
 
