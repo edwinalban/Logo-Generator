@@ -3,6 +3,7 @@ const fs = require("fs");
 const inquirer = require("inquirer");
 const prompts = require("./lib/prompts.js");
 const shapes = require("./lib/shapes.js");
+const generateSVG = require("./generateSVG.js");
 
 function writeToFile(svg, data) {
     fs.writeFile(svg, generateSVG(data), (err) => {

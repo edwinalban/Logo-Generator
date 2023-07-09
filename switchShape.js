@@ -1,41 +1,27 @@
 const prompts = require("./lib/prompts");
+const { Shape, Triangle, Square, Circle } = require("./lib/shapes");
 
-module.exports = switchShape;
+const newLogo = new `${prompts.shape}`(  
+    `${prompts.fillColor}`,
+    `${prompts.text}`,
+    `${prompts.textColor}`,
+    `${switchShape(prompts)}`
+    );
 
-function switchShape(data) {
+function switchShape(prompts) {
+    const shape = `${prompts.shape}`
 
-    const shape = new `${data.shape}`;
-    
-        switch (shape) {
-            case "Triangle":
-                `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    
-                    <polygon points="200,10 250,190 150,190" fill="${data.fillColor}" />
-                
-                    <text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}</text>
-            
-                </svg>`;
+    switch(shape) {
+        case "Triangle":
+            `<polygon points="200,10 250,190 150,190" fill="${prompts.fillColor}" />`;
             break;
-    
-            case "Square":
-                `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    
-                    <rect width="200" height="200" fill="${data.fillColor}" />
-                
-                    <text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}</text>
-            
-                </svg>`;
-    
+        case "Square":
+            `<rect width="200" height="200" fill="${prompts.fillColor}" />`;
             break;
-    
-            case "Circle":
-                `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
-    
-                    <circle cx="150" cy="100" r="80" fill="${data.fillColor}" />
-                
-                    <text x="150" y="125" font-size="60" text-anchor="middle" fill="${data.textColor}">${data.text}</text>
-            
-                </svg>`;
+        case "Circle":
+            `<circle cx="150" cy="100" r="80" fill="${prompts.fillColor}" />`;
             break;
-        };
     };
+};
+
+module.exports = newLogo;
