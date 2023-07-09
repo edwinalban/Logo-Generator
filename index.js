@@ -6,7 +6,7 @@ const switchShape = require("./switchShape.js");
 
 function writeToFile(svg, answers) {
     fs.writeFile(svg, switchShape(answers), (err) => {
-        err ? console.error(err) : console.log("SVG file written!");
+        err ? console.error(err) : console.log("Generated logo.svg!");
     });
 };
 
