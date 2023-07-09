@@ -10,25 +10,22 @@ function switchShape(answers) {
                 `${answers.fillColor}`,
                 `${answers.text}`,
                 `${answers.textColor}`,
-                triangle.render()
             );
-            break;
+            return triangle.render();
         case "Square":
             const square = new Square(
                 `${answers.fillColor}`,
                 `${answers.text}`,
                 `${answers.textColor}`,
-                square.render()
             );
-            break;
+            return square.render();
         case "Circle":
             const circle = new Circle(
                 `${answers.fillColor}`,
                 `${answers.text}`,
                 `${answers.textColor}`,
-                circle.render()
             );
-            break;
+            return circle.render();
     };
 };
 
