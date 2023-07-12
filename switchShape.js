@@ -8,23 +8,23 @@ function switchShape(answers) {
     switch (shape) {
         case "Triangle":
             const triangle = new Triangle(
-                `${answers.fillColor}`,
-                `${answers.text}`,
-                `${answers.textColor}`,
+                answers.fillColor,
+                answers.text,
+                answers.textColor,
             );
             return triangle.render();
         case "Square":
             const square = new Square(
-                `${answers.fillColor}`,
-                `${answers.text}`,
-                `${answers.textColor}`,
+                answers.fillColor,
+                answers.text,
+                answers.textColor,
             );
             return square.render();
         case "Circle":
             const circle = new Circle(
-                `${answers.fillColor}`,
-                `${answers.text}`,
-                `${answers.textColor}`,
+                answers.fillColor,
+                answers.text,
+                answers.textColor,
             );
             return circle.render();
     };
