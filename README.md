@@ -1,5 +1,5 @@
 # Logo Generator
-Generates a logo based on user input
+Generates a simple logo based on user input.
 
 ## Description
 
